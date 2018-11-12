@@ -26,20 +26,20 @@ void loop()
 {
   if (irrecv.decode(&results))
   {
-    Serial.println(results.value);
+    //Serial.println(results.value);
     switch (results.value)
     {
     case 4197062193:
       Serial.println("1");
-      digitalWrite(r, HIGH);
+      digitalWrite(r, !digitalRead(r));
       break;
     case 2021756569:
       Serial.println("2");
-      digitalWrite(g, HIGH);
+      digitalWrite(g, !digitalRead(g));
       break;
     case 3057459025:
       Serial.println("3");
-      digitalWrite(b, HIGH);
+      digitalWrite(b, !digitalRead(b));
       break;
     case 2354352215:
       Serial.println("-");
