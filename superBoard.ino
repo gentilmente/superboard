@@ -119,16 +119,17 @@ void determineLedState()
 
 void display()
 {
-  digitalWrite(ledPin, ledState);
+  digitalWrite(r, ledState);
 }
 
 void offAll()
 {
   Serial.println("-jkj");
-  digitalWrite(r, LOW);
-  digitalWrite(g, LOW);
-  digitalWrite(b, LOW);
+  digitalWrite(r, HIGH);
+  digitalWrite(g, HIGH);
+  digitalWrite(b, HIGH);
 }
+
 
 // **************************
 // *      cumple            *
